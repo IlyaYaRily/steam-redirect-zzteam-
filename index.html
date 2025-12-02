@@ -1,0 +1,30 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Launching Steam Client...</title>
+    <script>
+        // Изменено на базовую схему steam://
+        var launchUrl = "steam://"; 
+        window.location.href = launchUrl;
+
+        setTimeout(function() {
+            var manualLink = document.getElementById('manualLink');
+            if (manualLink) {
+                manualLink.style.display = 'block';
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h1>Launching Steam...</h1>
+    <p>Please wait or confirm the prompt from your browser.</p>
+    
+    <p id="manualLink" style="display:none;">
+        If it doesn't open, 
+        <!-- Ссылка для ручного клика также изменена на steam:// -->
+        <a href="steam://">click here to launch manually</a>.
+    </p>
+</body>
+</html>
